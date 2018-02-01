@@ -37,7 +37,7 @@ gradientDecent.linearPoly = function(
 };
 
 gradientDecent.logSlope = function(
-  theta, data, alpha, ind,lambda=0
+  theta, data, alpha, ind, lambda=0
 )
 {
   return gdTemplate(
@@ -62,6 +62,7 @@ gradientDecent.logPoly = function(
     ind,
     logHypoth,
     polynomial,
-    lambda
+    lambda,
+    deg
   );
 };
