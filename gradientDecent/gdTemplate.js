@@ -14,17 +14,22 @@ module.exports = function(
 )
 {
   let thetaJ = theta[ind];
-  let xVector = data[ind];
+  let costVal = 0;
   let m = data.length;
-  let costVal = cost(
-    xVector,
-    theta,
-    ind,
-    sig,
-    hypoth,
-    deg,
-    lambda
-  );
-  console.log('COST: ', thetaJ - (alpha / m) * costVal);
+  for(let i = 0; i < m; i++) {
+    let xVector = data[i];
+    costVal += cost(
+      xVector,
+      theta,
+      ind,
+      sig,
+      hypoth,
+      deg,
+      lambda
+    );
+    // console.log('');
+  }
+  console.log('COST: ', thetaJ - (alpha) * (costVal / m));
+  console.log('------------------');
   return thetaJ - (alpha / m) * costVal;
 };

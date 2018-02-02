@@ -16,8 +16,9 @@ module.exports = function(
   1 : xVector[currentIndex - 1];
 
   let yHypoth = hypoth(thetaVector, xVector, sigmoid, deg);
-  console.log('HYPOTHESIS', yHypoth);
-  console.log('ACTUAL: ', yActual);
+  // console.log('HYPOTHESIS', yHypoth);
+  // console.log('ACTUAL: ', yActual);
+  // console.log('DIFFERENCE: ', yHypoth - yActual);
   let bestFit = (yHypoth - yActual) * outerX;
 
   return bestFit + regularization(lambda, thetaVector, currentIndex);

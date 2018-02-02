@@ -12,11 +12,12 @@ module.exports = function(theta, data, alpha, deg=1, lambda=0) {
       if(!val) return val;
       let newTheta = gradientDecent(theta, data, alpha, ind, deg, lambda);
 
-
+      console.log('NEWTHETA: ', newTheta);
+      console.log('CURRENT_THETA: ', val);
       if(newTheta === val) {
         globalMinimums[ind] = newTheta;
         count += 1;
-        return undefined;
+        return newTheta;
       }
       return newTheta;
     });

@@ -1,2 +1,2 @@
 'use strict';
-module.exports = [0.2,1.4]
+module.exports = [2,5];
