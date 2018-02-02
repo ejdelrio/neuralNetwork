@@ -4,11 +4,11 @@ const {regularization} = require('./hypoth.js');
 module.exports = function(
   xVector,
   thetaVector,
-  lambda,
   currentIndex,
   sigmoid,
   hypoth,
-  deg=1
+  deg=1,
+  lambda=0
 )
 {
   let yActual = xVector[xVector.length - 1];
@@ -16,6 +16,8 @@ module.exports = function(
   1 : xVector[currentIndex - 1];
 
   let yHypoth = hypoth(thetaVector, xVector, sigmoid, deg);
+  console.log('HYPOTHESIS', yHypoth);
+  console.log('ACTUAL: ', yActual);
   let bestFit = (yHypoth - yActual) * outerX;
 
   return bestFit + regularization(lambda, thetaVector, currentIndex);

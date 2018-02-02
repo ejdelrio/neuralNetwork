@@ -17,6 +17,7 @@ gradientDecent.linearSlope = function(
     ind,
     linearHypoth,
     slopeIntercept,
+    1,
     lambda
   );
 };
@@ -47,6 +48,7 @@ gradientDecent.logSlope = function(
     ind,
     logHypoth,
     slopeIntercept,
+    1,
     lambda
   );
 };

@@ -9,8 +9,8 @@ module.exports = function(
   ind,
   hypoth,
   sig,
-  lambda=0,
-  deg=1
+  deg=1,
+  lambda=0
 )
 {
   let thetaJ = theta[ind];
@@ -19,11 +19,12 @@ module.exports = function(
   let costVal = cost(
     xVector,
     theta,
-    lambda,
     ind,
     sig,
     hypoth,
-    deg
+    deg,
+    lambda
   );
+  console.log('COST: ', thetaJ - (alpha / m) * costVal);
   return thetaJ - (alpha / m) * costVal;
 };
