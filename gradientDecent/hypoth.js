@@ -3,7 +3,7 @@
 Representation of various hypothesis functions.
 Split between linear and logistic regressions, each hypothisis
 requires a sigmoid function that inteprets the best fit line.
-eventual, all will take polynomial values
+eventual, all will take 1 to n degree polynomial values
 */
 const hypoth = module.exports = {};
 
