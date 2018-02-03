@@ -29,7 +29,7 @@ module.exports = function(
     );
     // console.log('');
   }
-  console.log('COST: ', thetaJ - (alpha) * (costVal / m));
+  console.log('COST: ', costVal / m);
   console.log('------------------');
   return thetaJ - (alpha / m) * costVal;
 };

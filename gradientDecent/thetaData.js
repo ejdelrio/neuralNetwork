@@ -1,2 +1,6 @@
 'use strict';
-module.exports = [2,5];
+
+module.exports = [
+  -6308.72669271521,
+  111.03863511102347
+];
