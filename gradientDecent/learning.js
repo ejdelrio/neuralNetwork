@@ -12,7 +12,10 @@ module.exports = function(theta, data, alpha, deg=1, lambda=0) {
       if(globalMinimums[ind]) return val;
       let newTheta = gradientDecent(currentTheta, data, alpha, ind, deg, lambda);
 
-      if(Math.abs(newTheta - val) < 0.00001) {
+      console.log('CURRENT_THETA_INDEX: ', ind);
+      console.log('NEWTHETA: ', newTheta);
+      console.log('CURRENT_THETA: ', val);
+      if(Math.abs(val - newTheta) < 0.000005) {
         globalMinimums[ind] = newTheta;
         count += 1;
         return newTheta;
