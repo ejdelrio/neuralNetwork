@@ -1,5 +1,14 @@
 'use strict';
+/*
+Cost generates the the sumation of errors from our actual points
+vs our hypothetical points.
 
+xVector represents a single row of our data set.
+hypoth is our function to generate a hypothetical point
+sigmoid is an activation funciton of our hypothetical funciton
+deg is unused at the moment
+lambda is unused at the moment
+*/
 const {regularization} = require('./hypoth.js');
 module.exports = function(
   xVector,
@@ -11,7 +20,7 @@ module.exports = function(
   lambda=0
 )
 {
-  let yActual = xVector[xVector.length - 1];
+  let yActual = xVector[xVector.length - 1]; //actual point value
   let outerX = currentIndex === 0 ?
   1 : xVector[currentIndex - 1];
 

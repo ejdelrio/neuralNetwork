@@ -1,5 +1,7 @@
 'use strict';
-
+/*
+  Sigmoid functions intepret the best fit line of our data.
+*/
 
 const sigmoid = module.exports = {};
 

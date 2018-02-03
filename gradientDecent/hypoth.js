@@ -1,5 +1,10 @@
 'use strict';
-
+/*
+Representation of various hypothesis functions.
+Split between linear and logistic regressions, each hypothisis
+requires a sigmoid function that inteprets the best fit line.
+eventual, all will take polynomial values
+*/
 const hypoth = module.exports = {};
 
 hypoth.linearHypoth = function(thetaVector, xVector, sigmoid, deg=1) {

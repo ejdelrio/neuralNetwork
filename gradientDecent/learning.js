@@ -1,5 +1,9 @@
 'use strict';
 
+/*
+Loops within loops within loops....
+Bare witness to the big O nightmare >:D
+*/
 const gradientDecent = require('./gradientDecent.js').linearSlope;
 
 module.exports = function(theta, data, alpha, deg=1, lambda=0) {
