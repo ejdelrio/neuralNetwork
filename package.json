@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ejdelrio/neuralNetwork/issues"
   },
-  "homepage": "https://github.com/ejdelrio/neuralNetwork#readme"
+  "homepage": "https://github.com/ejdelrio/neuralNetwork#readme",
+  "dependencies": {
+    "mathjs": "^3.20.2"
+  }
 }
